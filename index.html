@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>Визитка</title>
+    <link href="static/css/styles.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+</head>
+
+<body>
+
+<header>
+    <h1>Игорь Ковалёв</h1>
+</header>
+
+<main>
+
+    <!-- левая панель -->
+    <section class="contacts">
+
+        <!-- фото -->
+        <figure class="photo">
+            <img src="static/media/igor_young.png" alt="Фото Игоря в молодости" width="50%">
+            <figcaption>
+                <em>Таким я был, когда собрал свой первый компьютер.</em>
+            </figcaption>
+        </figure>
+
+        <!-- имя -->
+        <p style="text-align: center"><strong>Ковалёв Игорь Владимирович</strong></p>
+
+        <!-- скрытый список -->
+        <button type="button" class="expander" onclick="expand()">Контакты</button>
+        <div id="expander-content">
+            <div class="contact-button">
+                <a href="tel:+79788920609" class="phone">+7(978)8920609</a>
+                <a href="viber://chat?number=%2B79788920609" class="viber">Viber</a>
+                <a href="https://wa.me/89788920609" class="whatsapp">WatsApp</a>
+                <a href="https://t.me/igorkov6" class="telegram">Telegram</a>
+                <a href="mailto:igorkov6@gmail.com" class="email">igorkov6@gmail.com</a>
+                <a href="skype:igorkov6?userinfo" class="skype">Skype</a>
+            </div>
+        </div>
+
+        <!-- qr код -->
+        <figure class="photo">
+            <img src="static/media/qr_code.gif" alt="qr-code" width="70%">
+            <figcaption>
+                <em>Добавь меня в свои контакты.</em>
+            </figcaption>
+        </figure>
+
+    </section>
+
+    <!-- правая панель -->
+    <section class="about">
+
+        <h2>Обо мне</h2>
+        <div class="about-block">
+            <div>
+                <p><img src="static/media/logo_skill.jfif" height="60px" alt="SF logo" class="avatar"></p>
+            </div>
+            <div>
+                <p>Слушатель курса:<br>Fullstack разработчик на Python<br>SkillFactory FPW-84</p>
+            </div>
+        </div>
+
+        <h2>Образование</h2>
+        <div class="about-block">
+            <div>
+                <p><img src="static/media/igor_doctor.jpg" alt="Фото Игоря на работе" title="На работе" height="60px"></p>
+            </div>
+            <div>
+                <ol>
+                    <li>Радиоинженер</li>
+                    <li>Судовой электромеханик</li>
+                    <li>Инженер - медтехник</li>
+                </ol>
+            </div>
+        </div>
+
+        <h2>Опыт работы</h2>
+        <p>С 1998 года
+            <ins>инженер-разработчик</ins>
+            электронного оборудования.
+        </p>
+
+        <p>Мои основные функции в этой должности:</p>
+        <dl>
+            <dt><strong>Проектирование</strong></dt>
+            <dd>Проектирование принципиальных схем электронного оборудования.</dd>
+            <dd>Проектирование печатных плат.</dd>
+            <dt><strong>Разработка</strong></dt>
+            <dd>Разработка программного обеспечения для микроконтроллеров на языках С и ассемблере.</dd>
+            <dt><strong>Сопровождение</strong></dt>
+            <dd>Сопровождение продукции и программного обеспечения в производстве.</dd>
+        </dl>
+
+        <h2>Хобби</h2>
+        <div class="photo-block">
+            <p>
+                Люблю путешествовать с женой и сыном. В позапрошлом году побывал
+                в <strong>Турции</strong> 3 раза. В прошлом году - <strong>Франция</strong> и
+                <strong>Швейцария</strong>. В этом году планирую в <strong>Италию</strong>, но как говорится -
+                <q>человек предполагает, а Бог - располагает.</q>
+            </p>
+            <figure class="photo">
+                <a href="static/media/travel_big.jpg">
+                    <img src="static/media/igor_travel.jpg" alt="Фото Игоря в путешествии" width="100%">
+                </a>
+                <figcaption><em>Франция. Эльзас. 2022</em></figcaption>
+            </figure>
+        </div>
+
+        <h2>Как я стал разработчиком</h2>
+        <ul>
+            <li>2008 год - впервые узнал о языке Python</li>
+            <li>14 лет раздумывал</li>
+            <li>январь 2022 - решил стать Python разработчиком</li>
+            <li>февраль 2022 - начал изучать язык по-взрослому</li>
+            <li>июнь 2022 - взялся за Django</li>
+            <li>ноябрь 2022 - настал черед Javascript</li>
+            <li>февраль 2023 - и вот, наконец - HTML и CSS</li>
+        </ul>
+    </section>
+
+</main>
+
+<hr>
+
+<footer>
+    <!-- умная мысль -->
+    <p><q>Есть вещи, которые вы спокойно можете объяснить два раза, не рискуя,
+        что кто-нибудь поймет, о чем вы говорите</q> - считала мудрая Сова в сказке о Винни-Пухе.</p>
+</footer>
+
+
+<script>
+    // управление скрытым списком
+    function expand() {
+        let expandElement = document.querySelector('#expander-content')
+        if (expandElement.style.display === "block") {
+            expandElement.style.display = "none";
+        } else {
+            expandElement.style.display = "block";
+        }
+    }
+</script>
+</body>
+
+</html>
