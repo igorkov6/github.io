@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Визитка</title>
     <link href="static/css/styles.css" rel="stylesheet">
-    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico"/>
 </head>
 
 <body>
@@ -32,25 +32,29 @@
         <p style="text-align: center"><strong>Ковалёв Игорь Владимирович</strong></p>
 
         <!-- скрытый список -->
-        <button type="button" class="expander" onclick="expand()">Контакты</button>
-        <div id="expander-content">
+        <button type="button" class="collapser" id="contacts">Контакты</button>
+        <div class="collapser-content">
             <div class="contact-button">
                 <a href="tel:+79788920609" class="phone">+7(978)8920609</a>
-                <a href="viber://chat?number=%2B79788920609" class="viber">Viber</a>
                 <a href="https://wa.me/89788920609" class="whatsapp">WatsApp</a>
                 <a href="https://t.me/igorkov6" class="telegram">Telegram</a>
                 <a href="mailto:igorkov6@gmail.com" class="email">igorkov6@gmail.com</a>
+                <!--
+                <a href="viber://chat?number=%2B79788920609" class="viber">Viber</a>
                 <a href="skype:igorkov6?userinfo" class="skype">Skype</a>
+                 -->
             </div>
         </div>
 
         <!-- qr код -->
-        <figure class="photo">
-            <img src="static/media/qr_code.gif" alt="qr-code" width="70%">
-            <figcaption>
-                <em>Добавь меня в свои контакты.</em>
-            </figcaption>
-        </figure>
+        <div id="qr-code">
+            <figure class="photo">
+                <img src="static/media/qr_code.gif" alt="qr-code" width="70%">
+                <figcaption>
+                    <em>Добавь меня в свои контакты.</em>
+                </figcaption>
+            </figure>
+        </div>
 
     </section>
 
@@ -67,63 +71,75 @@
             </div>
         </div>
 
-        <h2>Образование</h2>
-        <div class="about-block">
-            <div>
-                <p><img src="static/media/igor_doctor.jpg" alt="Фото Игоря на работе" title="На работе" height="60px"></p>
-            </div>
-            <div>
-                <ol>
-                    <li>Радиоинженер</li>
-                    <li>Судовой электромеханик</li>
-                    <li>Инженер - медтехник</li>
-                </ol>
+        <button type="button" class="collapser">Образование</button>
+        <div class="collapser-content">
+            <div class="about-block">
+                <div>
+                    <p><img src="static/media/igor_doctor.jpg" alt="Фото Игоря на работе" title="На работе"
+                            height="60px">
+                    </p>
+                </div>
+                <div>
+                    <ol>
+                        <li>Радиоинженер</li>
+                        <li>Судовой электромеханик</li>
+                        <li>Инженер - медтехник</li>
+                    </ol>
+                </div>
             </div>
         </div>
 
-        <h2>Опыт работы</h2>
-        <p>С 1998 года
-            <ins>инженер-разработчик</ins>
-            электронного оборудования.
-        </p>
-
-        <p>Мои основные функции в этой должности:</p>
-        <dl>
-            <dt><strong>Проектирование</strong></dt>
-            <dd>Проектирование принципиальных схем электронного оборудования.</dd>
-            <dd>Проектирование печатных плат.</dd>
-            <dt><strong>Разработка</strong></dt>
-            <dd>Разработка программного обеспечения для микроконтроллеров на языках С и ассемблере.</dd>
-            <dt><strong>Сопровождение</strong></dt>
-            <dd>Сопровождение продукции и программного обеспечения в производстве.</dd>
-        </dl>
-
-        <h2>Хобби</h2>
-        <div class="photo-block">
-            <p>
-                Люблю путешествовать с женой и сыном. В позапрошлом году побывал
-                в <strong>Турции</strong> 3 раза. В прошлом году - <strong>Франция</strong> и
-                <strong>Швейцария</strong>. В этом году планирую в <strong>Италию</strong>, но как говорится -
-                <q>человек предполагает, а Бог - располагает.</q>
+        <button type="button" class="collapser">Опыт работы</button>
+        <div class="collapser-content">
+            <p>С 1998 года
+                <ins>инженер-разработчик</ins>
+                электронного оборудования.
             </p>
-            <figure class="photo">
-                <a href="static/media/travel_big.jpg">
-                    <img src="static/media/igor_travel.jpg" alt="Фото Игоря в путешествии" width="100%">
-                </a>
-                <figcaption><em>Франция. Эльзас. 2022</em></figcaption>
-            </figure>
+
+            <p>Мои основные функции в этой должности:</p>
+            <dl>
+                <dt><strong>Проектирование</strong></dt>
+                <dd>Проектирование принципиальных схем электронного оборудования.</dd>
+                <dd>Проектирование печатных плат.</dd>
+                <dt><strong>Разработка</strong></dt>
+                <dd>Разработка программного обеспечения для микроконтроллеров на языках С и ассемблере.</dd>
+                <dt><strong>Сопровождение</strong></dt>
+                <dd>Сопровождение продукции и программного обеспечения в производстве.</dd>
+            </dl>
         </div>
 
-        <h2>Как я стал разработчиком</h2>
-        <ul>
-            <li>2008 год - впервые узнал о языке Python</li>
-            <li>14 лет раздумывал</li>
-            <li>январь 2022 - решил стать Python разработчиком</li>
-            <li>февраль 2022 - начал изучать язык по-взрослому</li>
-            <li>июнь 2022 - взялся за Django</li>
-            <li>ноябрь 2022 - настал черед Javascript</li>
-            <li>февраль 2023 - и вот, наконец - HTML и CSS</li>
-        </ul>
+
+        <button type="button" class="collapser">Хобби</button>
+        <div class="collapser-content">
+            <div class="photo-block">
+                <p>
+                    Люблю путешествовать с женой и сыном. В позапрошлом году побывал
+                    в <strong>Турции</strong> 3 раза. В прошлом году - <strong>Франция</strong> и
+                    <strong>Швейцария</strong>. В этом году планирую в <strong>Италию</strong>, но как говорится -
+                    <q>человек предполагает, а Бог - располагает.</q>
+                </p>
+                <figure class="photo">
+                    <a href="static/media/travel_big.jpg">
+                        <img src="static/media/igor_travel.jpg" alt="Фото Игоря в путешествии" width="100%">
+                    </a>
+                    <figcaption><em>Франция. Эльзас. 2022</em></figcaption>
+                </figure>
+            </div>
+        </div>
+
+        <button type="button" class="collapser">Как я стал разработчиком</button>
+        <div class="collapser-content">
+            <ul>
+                <li>2008 год - впервые узнал о языке Python</li>
+                <li>14 лет раздумывал</li>
+                <li>январь 2022 - решил стать Python разработчиком</li>
+                <li>февраль 2022 - начал изучать язык по-взрослому</li>
+                <li>июнь 2022 - взялся за Django</li>
+                <li>ноябрь 2022 - настал черед Javascript</li>
+                <li>февраль 2023 - и вот, наконец - HTML и CSS</li>
+            </ul>
+        </div>
+
     </section>
 
 </main>
@@ -138,14 +154,28 @@
 
 
 <script>
-    // управление скрытым списком
-    function expand() {
-        let expandElement = document.querySelector('#expander-content')
-        if (expandElement.style.display === "block") {
-            expandElement.style.display = "none";
-        } else {
-            expandElement.style.display = "block";
-        }
+
+    const coll = document.getElementsByClassName("collapser");
+    const qrCode = document.getElementById("qr-code")
+    let i;
+
+    for (i = 0; i < coll.length; i++) {
+        coll[i].addEventListener("click", function () {
+            this.classList.toggle("active");
+            const content = this.nextElementSibling;
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                if (this.id === "contacts") {
+                    qrCode.style.display = "block";
+                }
+            } else {
+                content.style.display = "block";
+                // спрятать qr code
+                if (this.id === "contacts") {
+                    qrCode.style.display = "none";
+                }
+            }
+        });
     }
 </script>
 </body>
