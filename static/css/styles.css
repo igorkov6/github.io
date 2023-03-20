@@ -155,14 +155,14 @@ h2 {
 }
 
 .active, .expander:hover {
-    background-color: #ccc;
+    background-color: lightgray;
 }
 
 .expander-content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
+    background-color: aliceblue;
 }
 
 #qr-code {
