@@ -169,6 +169,80 @@ h2 {
     display: block;
 }
 
+/* вертикальная линия */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: gray;
+    top: 0;
+    bottom: 0;
+    left: 31px;
+    margin-left: -3px;
+}
+.timeline h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* точка полосы */
+.timeline .container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: lightgray;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+}
+.timeline .right::after {
+    left: 15px;
+}
+
+/* стрелка*/
+.timeline .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent lightgray transparent transparent;
+}
+.timeline .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent lightgray transparent transparent;
+}
+
+/* контейнер информации */
+.timeline .container {
+    padding: 10px 25px 10px 70px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+}
+
+/* содержимое */
+.timeline .container .content {
+    padding: 5px 20px;
+    background-color: lightgray;
+    position: relative;
+    border-radius: 6px;
+}
+
 @media screen and (min-width: 600px) {
     main {
         flex-direction: row;
