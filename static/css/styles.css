@@ -187,16 +187,6 @@ h2 {
     margin-left: -3px;
 }
 
-.timeline h3 {
-    margin: 0;
-    padding: 0;
-}
-
-.timeline p {
-    margin: 0;
-    padding: 0;
-}
-
 /* точка линии */
 .timeline .container::after {
     content: '';
@@ -241,7 +231,7 @@ h2 {
     padding: 10px 25px 10px 70px;
     position: relative;
     background-color: inherit;
-    width: 100%;
+    width: 80%;
 }
 
 /* контент */
@@ -250,6 +240,11 @@ h2 {
     background-color: lightgray;
     position: relative;
     border-radius: 6px;
+}
+
+.timeline .container .content h3, p {
+    margin: 0;
+    padding: 0;
 }
 
 @media screen and (min-width: 600px) {
