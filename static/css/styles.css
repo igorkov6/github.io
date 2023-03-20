@@ -4,7 +4,6 @@
 }
 
 :root {
-    --main-bg: #eee;
     --main-color: #333;
 }
 
@@ -15,7 +14,6 @@
 body {
     margin: 0;
     color: var(--main-color);
-    background: var(--main-bg) url(../media/wall.jpg) no-repeat;
 }
 
 a {
