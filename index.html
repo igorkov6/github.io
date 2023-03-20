@@ -32,8 +32,13 @@
         <p style="text-align: center"><strong>Ковалёв Игорь Владимирович</strong></p>
 
         <!-- скрытый список -->
-        <button type="button" class="collapser" id="contacts">Контакты</button>
-        <div class="collapser-content">
+        <button type="button" class="expander" id="contacts">
+            <svg width="20px" height="20px">
+                <polyline points="0,6 15,6 8,20" style="stroke-width: 1" fill="gray"></polyline>
+            </svg>
+            Контакты
+        </button>
+        <div class="expander-content">
             <div class="contact-button">
                 <a href="tel:+79788920609" class="phone">+7(978)8920609</a>
                 <a href="https://wa.me/89788920609" class="whatsapp">WatsApp</a>
@@ -71,26 +76,29 @@
             </div>
         </div>
 
-        <button type="button" class="collapser">Образование</button>
-        <div class="collapser-content">
-            <div class="about-block">
-                <div>
-                    <p><img src="static/media/igor_doctor.jpg" alt="Фото Игоря на работе" title="На работе"
-                            height="60px">
-                    </p>
-                </div>
-                <div>
-                    <ol>
-                        <li>Радиоинженер</li>
-                        <li>Судовой электромеханик</li>
-                        <li>Инженер - медтехник</li>
-                    </ol>
-                </div>
+        <h2>Образование</h2>
+        <div class="about-block">
+            <div>
+                <p><img src="static/media/igor_doctor.jpg" alt="Фото Игоря на работе" title="На работе"
+                        height="60px">
+                </p>
+            </div>
+            <div>
+                <ol>
+                    <li>Радиоинженер</li>
+                    <li>Судовой электромеханик</li>
+                    <li>Инженер - медтехник</li>
+                </ol>
             </div>
         </div>
 
-        <button type="button" class="collapser">Опыт работы</button>
-        <div class="collapser-content">
+        <button type="button" class="expander">
+            <svg width="20px" height="20px">
+                <polyline points="0,6 15,6 8,20" style="stroke-width: 1" fill="gray"></polyline>
+            </svg>
+            Опыт работы
+        </button>
+        <div class="expander-content">
             <p>С 1998 года
                 <ins>инженер-разработчик</ins>
                 электронного оборудования.
@@ -109,8 +117,13 @@
         </div>
 
 
-        <button type="button" class="collapser">Хобби</button>
-        <div class="collapser-content">
+        <button type="button" class="expander">
+            <svg width="20px" height="20px">
+                <polyline points="0,6 15,6 8,20" style="stroke-width: 1" fill="gray"></polyline>
+            </svg>
+            Хобби
+        </button>
+        <div class="expander-content">
             <div class="photo-block">
                 <p>
                     Люблю путешествовать с женой и сыном. В позапрошлом году побывал
@@ -127,8 +140,13 @@
             </div>
         </div>
 
-        <button type="button" class="collapser">Как я стал разработчиком</button>
-        <div class="collapser-content">
+        <button type="button" class="expander">
+            <svg width="20px" height="20px">
+                <polyline points="0,6 15,6 8,20" style="stroke-width: 1" fill="gray"></polyline>
+            </svg>
+            Как я стал разработчиком
+        </button>
+        <div class="expander-content">
             <ul>
                 <li>2008 год - впервые узнал о языке Python</li>
                 <li>14 лет раздумывал</li>
@@ -152,19 +170,18 @@
         что кто-нибудь поймет, о чем вы говорите</q> - считала мудрая Сова в сказке о Винни-Пухе.</p>
 </footer>
 
-
 <script>
 
-    const coll = document.getElementsByClassName("collapser");
+    const coll = document.getElementsByClassName("expander");
     const qrCode = document.getElementById("qr-code")
     let i;
 
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {
-            this.classList.toggle("active");
             const content = this.nextElementSibling;
             if (content.style.display === "block") {
                 content.style.display = "none";
+                // открыть qr code
                 if (this.id === "contacts") {
                     qrCode.style.display = "block";
                 }
@@ -178,6 +195,7 @@
         });
     }
 </script>
+
 </body>
 
 </html>

@@ -140,7 +140,7 @@ h2 {
     grid-template-columns: 100%;
 }
 
-.collapser{
+.expander {
     color: var(--main-color);
     font-family: "Mulish Light", Arial, Helvetica, sans-serif;
     cursor: pointer;
@@ -154,11 +154,11 @@ h2 {
     background-color: inherit;
 }
 
-.active, .collapser:hover {
+.active, .expander:hover {
     background-color: #ccc;
 }
 
-.collapser-content {
+.expander-content {
     padding: 0 18px;
     display: none;
     overflow: hidden;
