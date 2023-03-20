@@ -31,7 +31,8 @@
 
         <button type="button" class="expander" id="contacts">
             <svg width="20px" height="20px">
-                <polyline points="0,6 15,6 8,20" style="stroke-width: 1" fill="gray"></polyline>
+                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray" id="open"></polyline>
+                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray" id="close"></polyline>
             </svg>
             Контакты
         </button>
@@ -90,7 +91,8 @@
 
         <button type="button" class="expander">
             <svg width="20px" height="20px">
-                <polyline points="0,6 15,6 8,20" style="stroke-width: 1" fill="gray"></polyline>
+                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray" id="open"></polyline>
+                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray" id="close"></polyline>
             </svg>
             Опыт работы
         </button>
@@ -113,7 +115,8 @@
 
         <button type="button" class="expander">
             <svg width="20px" height="20px">
-                <polyline points="0,6 15,6 8,20" style="stroke-width: 1" fill="gray"></polyline>
+                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray" id="open"></polyline>
+                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray" id="close"></polyline>
             </svg>
             Хобби
         </button>
@@ -136,7 +139,8 @@
 
         <button type="button" class="expander">
             <svg width="20px" height="20px">
-                <polyline points="0,6 15,6 8,20" style="stroke-width: 1" fill="gray"></polyline>
+                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray" id="open"></polyline>
+                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray" id="close"></polyline>
             </svg>
             Как я стал разработчиком
         </button>
@@ -207,15 +211,27 @@
 
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {
+
+            const markOpen = this.querySelector('#open');
+            const markClose = this.querySelector('#close');
             const content = this.nextElementSibling;
+
+            // список раскрыт
             if (content.style.display === "block") {
+                // скрыть список
                 content.style.display = "none";
+                markOpen.style.display = "inline";
+                markClose.style.display = "none";
                 // открыть qr code
                 if (this.id === "contacts") {
                     qrCode.style.display = "block";
                 }
+            // список скрыт
             } else {
+                // раскрыть список
                 content.style.display = "block";
+                markOpen.style.display = "none";
+                markClose.style.display = "inline";
                 // спрятать qr code
                 if (this.id === "contacts") {
                     qrCode.style.display = "none";
