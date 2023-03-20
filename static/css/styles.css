@@ -175,6 +175,7 @@ h2 {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .timeline::after {
     content: '';
     position: absolute;
@@ -185,12 +186,18 @@ h2 {
     left: 31px;
     margin-left: -3px;
 }
-.timeline h3, p {
+
+.timeline h3 {
     margin: 0;
     padding: 0;
 }
 
-/* точка полосы */
+.timeline p {
+    margin: 0;
+    padding: 0;
+}
+
+/* точка линии */
 .timeline .container::after {
     content: '';
     position: absolute;
@@ -203,11 +210,12 @@ h2 {
     border-radius: 50%;
     z-index: 1;
 }
+
 .timeline .right::after {
     left: 15px;
 }
 
-/* стрелка*/
+/* стрелка контейнера */
 .timeline .right::before {
     content: " ";
     height: 0;
@@ -220,6 +228,7 @@ h2 {
     border-width: 10px 10px 10px 0;
     border-color: transparent lightgray transparent transparent;
 }
+
 .timeline .container::before {
     left: 60px;
     border: medium solid white;
@@ -227,7 +236,7 @@ h2 {
     border-color: transparent lightgray transparent transparent;
 }
 
-/* контейнер информации */
+/* контейнер контента */
 .timeline .container {
     padding: 10px 25px 10px 70px;
     position: relative;
@@ -235,7 +244,7 @@ h2 {
     width: 100%;
 }
 
-/* содержимое */
+/* контент */
 .timeline .container .content {
     padding: 5px 20px;
     background-color: lightgray;
