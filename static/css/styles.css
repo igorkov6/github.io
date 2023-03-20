@@ -242,7 +242,12 @@ h2 {
     border-radius: 6px;
 }
 
-.timeline .container .content h3, p {
+.timeline .container .content h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.timeline .container .content p {
     margin: 0;
     padding: 0;
 }
