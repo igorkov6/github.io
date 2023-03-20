@@ -20,6 +20,7 @@
     <!-- левая панель -->
     <section class="contacts">
 
+        <!-- фото -->
         <figure class="photo">
             <img src="static/media/igor_young.png" alt="Фото Игоря в молодости" width="50%">
             <figcaption>
@@ -27,15 +28,20 @@
             </figcaption>
         </figure>
 
+        <!-- имя -->
         <p style="text-align: center"><strong>Ковалёв Игорь Владимирович</strong></p>
 
+        <!-- контакты -->
         <button type="button" class="expander" id="contacts">
             <svg width="20px" height="20px">
-                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray" id="open"></polyline>
-                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray" id="close"></polyline>
+                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"
+                          id="open"></polyline>
+                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray"
+                          id="close"></polyline>
             </svg>
             Контакты
         </button>
+
         <div class="expander-content">
             <div class="contact-button">
                 <a href="tel:+79788920609" class="phone">+7(978)8920609</a>
@@ -49,6 +55,7 @@
             </div>
         </div>
 
+        <!-- qr code -->
         <div id="qr-code">
             <figure class="photo">
                 <img src="static/media/qr_code.gif" alt="qr-code" width="70%">
@@ -64,6 +71,7 @@
     <section class="about">
 
         <h2>Обо мне</h2>
+
         <div class="about-block">
             <div>
                 <p><img src="static/media/logo_skill.jfif" height="60px" alt="SF logo" class="avatar"></p>
@@ -74,6 +82,7 @@
         </div>
 
         <h2>Образование</h2>
+
         <div class="about-block">
             <div>
                 <p>
@@ -89,13 +98,17 @@
             </div>
         </div>
 
+        <!-- опыт работы -->
         <button type="button" class="expander">
             <svg width="20px" height="20px">
-                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray" id="open"></polyline>
-                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray" id="close"></polyline>
+                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"
+                          id="open"></polyline>
+                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray"
+                          id="close"></polyline>
             </svg>
             Опыт работы
         </button>
+
         <div class="expander-content">
             <p>С 1998 года
                 <ins>инженер-разработчик</ins>
@@ -113,13 +126,17 @@
             </dl>
         </div>
 
+        <!-- хобби -->
         <button type="button" class="expander">
             <svg width="20px" height="20px">
-                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray" id="open"></polyline>
-                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray" id="close"></polyline>
+                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"
+                          id="open"></polyline>
+                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray"
+                          id="close"></polyline>
             </svg>
             Хобби
         </button>
+
         <div class="expander-content">
             <div class="photo-block">
                 <p>
@@ -137,57 +154,69 @@
             </div>
         </div>
 
+        <!-- история -->
         <button type="button" class="expander">
             <svg width="20px" height="20px">
-                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray" id="open"></polyline>
-                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray" id="close"></polyline>
+                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"
+                          id="open"></polyline>
+                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray"
+                          id="close"></polyline>
             </svg>
             Как я стал разработчиком
         </button>
+
         <div class="expander-content">
             <div class="timeline">
+
                 <div class="container right">
                     <div class="content">
                         <h3>2008</h3>
                         <p>впервые узнал о языке Python</p>
                     </div>
                 </div>
+
                 <div class="container right">
                     <div class="content">
                         <h3>2008-2022</h3>
                         <p>14 лет раздумывал</p>
                     </div>
                 </div>
+
                 <div class="container right">
                     <div class="content">
                         <h3>январь 2022</h3>
                         <p>решил стать Python разработчиком</p>
                     </div>
                 </div>
+
                 <div class="container right">
                     <div class="content">
                         <h3>февраль 2022</h3>
                         <p>начал изучать язык по-взрослому</p>
                     </div>
                 </div>
+
                 <div class="container right">
                     <div class="content">
                         <h3>июнь 2022</h3>
                         <p>взялся за Django</p>
                     </div>
                 </div>
+
                 <div class="container right">
                     <div class="content">
                         <h3>ноябрь 2022</h3>
                         <p>настал черед Javascript</p>
                     </div>
                 </div>
+
                 <div class="container right">
                     <div class="content">
                         <h3>февраль 2023</h3>
                         <p>и вот, наконец - HTML и CSS</p>
                     </div>
                 </div>
+
             </div>
         </div>
 
@@ -225,7 +254,7 @@
                 if (this.id === "contacts") {
                     qrCode.style.display = "block";
                 }
-            // список скрыт
+                // список скрыт
             } else {
                 // раскрыть список
                 content.style.display = "block";
