@@ -5,7 +5,11 @@
 
 $main-color: #333;
 $bg-header: lemonchiffon;
-$bg-nav: white;
+$bg-nav: aliceblue;
+$nav-height: 64px;
+$font-mulish: "Mulish Light", Arial, Helvetica, sans-serif;
+$name-size: 1.5rem;
+$h1-size: 2rem;
 
 * {
   font-size: 20px;
@@ -21,12 +25,12 @@ header {
 
   & h1 {
 
-    font-family: "Mulish Light", Arial, Helvetica, sans-serif;
+    font-family: $font-mulish;
     font-weight: lighter;
-    margin: 64px;
+    margin: $nav-height;
     padding: 1rem;
     text-align: center;
-    font-size: 2rem;
+    font-size: $h1-size;
   }
 }
 
@@ -43,13 +47,13 @@ footer {
 .topnav {
   display: inline;
   background-color: $bg-nav;
-  height: 64px;
+  height: $nav-height;
   width: 100%;
   position: fixed;
   top: 0;
 
   & a {
-    font-family: "Mulish Light", Arial, Helvetica, sans-serif;
+    font-family: $font-mulish;
     float: left;
     display: block;
     text-align: center;
@@ -85,7 +89,7 @@ footer {
       border: none;
       height: 64px;
       overflow: hidden;
-      font-family: "Mulish Light", Arial, Helvetica, sans-serif;
+      font-family: $font-mulish;
     }
 
     /* Dropdown Content (Hidden by Default) */
@@ -93,17 +97,17 @@ footer {
       display: none;
       position: absolute;
       width: 150px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       z-index: 1;
 
       /* Links inside the dropdown */
       & a {
-        color: black;
+        color: $main-color;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
         width: 150px;
-        background-color: white;
+        background-color: $bg-nav;
 
         /* Change color of dropdown links on hover */
         &:hover {
@@ -118,7 +122,7 @@ footer {
   text-align: center;
 
   & strong {
-    font-size: 1.5rem;
+    font-size: $name-size;
   }
 }
 
@@ -204,7 +208,7 @@ footer {
 .expander {
   .expander__button {
     color: $main-color;
-    font-family: "Mulish Light", Arial, Helvetica, sans-serif;
+    font-family: $font-mulish;
     font-size: 1.5rem;
     cursor: pointer;
     margin: 1rem 0;
@@ -226,23 +230,6 @@ footer {
     display: none;
     overflow: hidden;
     background-color: aliceblue;
-  }
-}
-
-.block {
-  .block__title {
-    & h2 {
-      font-family: "Mulish Light", Arial, Helvetica, sans-serif;
-      font-weight: lighter;
-      font-size: 1.5rem;
-      border-bottom-style: solid;
-      border-bottom-width: 1px;
-      border-bottom-color: lightgray;
-    }
-  }
-
-  .block__content {
-    display: flex;
   }
 }
 
@@ -330,6 +317,23 @@ footer {
   }
 }
 
+.block {
+  .block__title {
+    & h2 {
+      font-family: $font-mulish;
+      font-weight: lighter;
+      font-size: 1.5rem;
+      border-bottom-style: solid;
+      border-bottom-width: 1px;
+      border-bottom-color: lightgray;
+    }
+  }
+
+  .block__content {
+    display: flex;
+  }
+}
+
 .block-qrcode {
   display: block;
 }
@@ -343,7 +347,6 @@ footer {
   display: grid;
   grid-template-columns: 100%;
 }
-
 
 @media screen and (min-width: 800px) {
   main {

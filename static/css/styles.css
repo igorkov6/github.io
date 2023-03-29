@@ -29,7 +29,7 @@ footer {
 
 .topnav {
   display: inline;
-  background-color: white;
+  background-color: aliceblue;
   height: 64px;
   width: 100%;
   position: fixed;
@@ -56,7 +56,7 @@ footer {
     .topnav .dropdown:hover .dropdown__content {
       display: block; }
     .topnav .dropdown .dropdown__button {
-      background-color: white;
+      background-color: aliceblue;
       color: #333;
       padding: 20px 16px;
       font-size: 20px;
@@ -68,16 +68,16 @@ footer {
       display: none;
       position: absolute;
       width: 150px;
-      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       z-index: 1;
       /* Links inside the dropdown */ }
       .topnav .dropdown .dropdown__content a {
-        color: black;
+        color: #333;
         padding: 12px 16px;
         text-decoration: none;
         display: block;
         width: 150px;
-        background-color: white;
+        background-color: aliceblue;
         /* Change color of dropdown links on hover */ }
         .topnav .dropdown .dropdown__content a:hover {
           color: gray; }
@@ -154,16 +154,6 @@ footer {
   overflow: hidden;
   background-color: aliceblue; }
 
-.block .block__title h2 {
-  font-family: "Mulish Light", Arial, Helvetica, sans-serif;
-  font-weight: lighter;
-  font-size: 1.5rem;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-bottom-color: lightgray; }
-.block .block__content {
-  display: flex; }
-
 .timeline {
   /* вертикальная линия */
   /* последовательность не изменять */
@@ -228,6 +218,16 @@ footer {
       .timeline .container .content p {
         margin: 0;
         padding: 0; }
+
+.block .block__title h2 {
+  font-family: "Mulish Light", Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: lightgray; }
+.block .block__content {
+  display: flex; }
 
 .block-qrcode {
   display: block; }
