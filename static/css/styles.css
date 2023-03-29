@@ -29,7 +29,7 @@ footer {
 
 .topnav {
   display: inline;
-  background-color: lemonchiffon;
+  background-color: white;
   height: 64px;
   width: 100%;
   position: fixed;
@@ -56,12 +56,11 @@ footer {
     .topnav .dropdown:hover .dropdown__content {
       display: block; }
     .topnav .dropdown .dropdown__button {
-      background-color: lemonchiffon;
+      background-color: white;
       color: #333;
       padding: 20px 16px;
       font-size: 20px;
       border: none;
-      width: 100px;
       height: 64px;
       overflow: hidden;
       font-family: "Mulish Light", Arial, Helvetica, sans-serif; }
@@ -81,7 +80,7 @@ footer {
         background-color: white;
         /* Change color of dropdown links on hover */ }
         .topnav .dropdown .dropdown__content a:hover {
-          background-color: lemonchiffon; }
+          color: gray; }
 
 .name {
   text-align: center; }
