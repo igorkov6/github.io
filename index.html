@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Визитка</title>
-    <link href="static/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/styles.css">
     <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico"/>
 </head>
 
@@ -18,209 +18,228 @@
 <main>
 
     <!-- левая панель -->
-    <section class="contacts">
+    <article class="contacts">
 
         <!-- фото -->
-        <figure class="photo">
-            <img src="static/media/igor_young.png" alt="Фото Игоря в молодости" width="50%">
-            <figcaption>
-                <em>Таким я был, когда собрал свой первый компьютер.</em>
-            </figcaption>
-        </figure>
+        <section>
+            <figure class="photo">
+                <img src="static/media/igor_young.png" alt="Фото Игоря в молодости" width="50%">
+                <figcaption>
+                    <em>Таким я был, когда собрал свой первый компьютер.</em>
+                </figcaption>
+            </figure>
+        </section>
 
         <!-- имя -->
-        <p style="text-align: center"><strong>Ковалёв Игорь Владимирович</strong></p>
+        <section class="name">
+            <strong>Ковалёв Игорь Владимирович</strong>
+        </section>
 
         <!-- контакты -->
-        <button type="button" class="expander" id="contacts">
-            <svg width="20px" height="20px">
-                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"
-                          id="open"></polyline>
-                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray"
-                          id="close"></polyline>
-            </svg>
-            Контакты
-        </button>
+        <section class="expander">
+            <button class="expander__button" type="button" id="contacts">
+                <svg width="20px" height="20px">
+                    <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray" id="open">
+                    </polyline>
+                    <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray" id="close">
+                    </polyline>
+                </svg>
+                Контакты
+            </button>
 
-        <div class="expander-content">
-            <div class="contact-button">
-                <a href="tel:+79788920609" class="phone">+7(978)8920609</a>
-                <a href="https://wa.me/89788920609" class="whatsapp">WatsApp</a>
-                <a href="https://t.me/igorkov6" class="telegram">Telegram</a>
-                <a href="mailto:igorkov6@gmail.com" class="email">igorkov6@gmail.com</a>
-                <!--
-                <a href="viber://chat?number=%2B79788920609" class="viber">Viber</a>
-                <a href="skype:igorkov6?userinfo" class="skype">Skype</a>
-                 -->
+            <div class="expander__content">
+                <div class="contact">
+                    <a href="tel:+79788920609" class="contact__phone">+7(978)8920609</a>
+                    <a href="https://wa.me/89788920609" class="contact__whatsapp">WatsApp</a>
+                    <a href="https://t.me/igorkov6" class="contact__telegram">Telegram</a>
+                    <a href="mailto:igorkov6@gmail.com" class="contact__email">igorkov6@gmail.com</a>
+                    <a href="viber://chat?number=%2B79788920609" class="contact__viber">Viber</a>
+                    <a href="skype:igorkov6?userinfo" class="contact__skype">Skype</a>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- qr code -->
-        <div id="qr-code">
+        <section class="block-qrcode" id="qr-code">
             <figure class="photo">
                 <img src="static/media/qr_code.gif" alt="qr-code" width="70%">
                 <figcaption>
                     <em>Добавь меня в свои контакты.</em>
                 </figcaption>
             </figure>
-        </div>
+        </section>
 
-    </section>
+    </article>
 
     <!-- правая панель -->
-    <section class="about">
+    <article class="about">
 
-        <h2>Обо мне</h2>
+        <!-- обо мне -->
+        <section class="block">
+            <div class="block__title">
+                <h2>Обо мне</h2>
+            </div>
+            <div class="block__content">
+                <div>
+                    <p><img src="static/media/logo_skill.jfif" height="60px" alt="SF logo" class="block-avatar"></p>
+                </div>
+                <div>
+                    <p>Слушатель курса:<br>Fullstack разработчик на Python<br>SkillFactory FPW-84</p>
+                </div>
+            </div>
+        </section>
 
-        <div class="about-block">
-            <div>
-                <p><img src="static/media/logo_skill.jfif" height="60px" alt="SF logo" class="avatar"></p>
+        <!-- образование -->
+        <section class="block">
+            <viv class="block__title">
+                <h2>Образование</h2>
+            </viv>
+            <div class="block__content">
+                <div>
+                    <p>
+                        <img src="static/media/igor_doctor.jpg" alt="Фото Игоря на работе" title="На работе"
+                             height="60px">
+                    </p>
+                </div>
+                <div>
+                    <ol>
+                        <li>Радиоинженер</li>
+                        <li>Судовой электромеханик</li>
+                        <li>Инженер - медтехник</li>
+                    </ol>
+                </div>
             </div>
-            <div>
-                <p>Слушатель курса:<br>Fullstack разработчик на Python<br>SkillFactory FPW-84</p>
-            </div>
-        </div>
-
-        <h2>Образование</h2>
-
-        <div class="about-block">
-            <div>
-                <p>
-                    <img src="static/media/igor_doctor.jpg" alt="Фото Игоря на работе" title="На работе" height="60px">
-                </p>
-            </div>
-            <div>
-                <ol>
-                    <li>Радиоинженер</li>
-                    <li>Судовой электромеханик</li>
-                    <li>Инженер - медтехник</li>
-                </ol>
-            </div>
-        </div>
+        </section>
 
         <!-- опыт работы -->
-        <button type="button" class="expander">
-            <svg width="20px" height="20px">
-                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"
-                          id="open"></polyline>
-                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray"
-                          id="close"></polyline>
-            </svg>
-            Опыт работы
-        </button>
+        <section class="expander">
+            <button type="button" class="expander__button">
+                <svg width="20px" height="20px">
+                    <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"
+                              id="open"></polyline>
+                    <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray"
+                              id="close"></polyline>
+                </svg>
+                Опыт работы
+            </button>
 
-        <div class="expander-content">
-            <p>С 1998 года
-                <ins>инженер-разработчик</ins>
-                электронного оборудования.
-            </p>
-            <p>Мои основные функции в этой должности:</p>
-            <dl>
-                <dt><strong>Проектирование</strong></dt>
-                <dd>Проектирование принципиальных схем электронного оборудования.</dd>
-                <dd>Проектирование печатных плат.</dd>
-                <dt><strong>Разработка</strong></dt>
-                <dd>Разработка программного обеспечения для микроконтроллеров на языках С и ассемблере.</dd>
-                <dt><strong>Сопровождение</strong></dt>
-                <dd>Сопровождение продукции и программного обеспечения в производстве.</dd>
-            </dl>
-        </div>
+            <div class="expander__content">
+                <p>С 1998 года
+                    <ins>инженер-разработчик</ins>
+                    электронного оборудования.
+                </p>
+                <p>Мои основные функции в этой должности:</p>
+                <dl>
+                    <dt><strong>Проектирование</strong></dt>
+                    <dd>Проектирование принципиальных схем электронного оборудования.</dd>
+                    <dd>Проектирование печатных плат.</dd>
+                    <dt><strong>Разработка</strong></dt>
+                    <dd>Разработка программного обеспечения для микроконтроллеров на языках С и ассемблере.</dd>
+                    <dt><strong>Сопровождение</strong></dt>
+                    <dd>Сопровождение продукции и программного обеспечения в производстве.</dd>
+                </dl>
+            </div>
+        </section>
 
         <!-- хобби -->
-        <button type="button" class="expander">
-            <svg width="20px" height="20px">
-                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"
-                          id="open"></polyline>
-                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray"
-                          id="close"></polyline>
-            </svg>
-            Хобби
-        </button>
+        <section class="expander">
+            <button type="button" class="expander__button">
+                <svg width="20px" height="20px">
+                    <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"
+                              id="open"></polyline>
+                    <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray"
+                              id="close"></polyline>
+                </svg>
+                Хобби
+            </button>
 
-        <div class="expander-content">
-            <div class="photo-block">
-                <p>
-                    Люблю путешествовать с женой и сыном. В позапрошлом году побывал
-                    в <strong>Турции</strong> 3 раза. В прошлом году - <strong>Франция</strong> и
-                    <strong>Швейцария</strong>. В этом году планирую в <strong>Италию</strong>, но как говорится -
-                    <q>человек предполагает, а Бог - располагает.</q>
-                </p>
-                <figure class="photo">
-                    <a href="static/media/travel_big.jpg">
-                        <img src="static/media/igor_travel.jpg" alt="Фото Игоря в путешествии" width="100%">
-                    </a>
-                    <figcaption><em>Франция. Эльзас. 2022</em></figcaption>
-                </figure>
+            <div class="expander__content">
+                <div class="block-photo">
+                    <p>
+                        Люблю путешествовать с женой и сыном. В позапрошлом году побывал
+                        в <strong>Турции</strong> 3 раза. В прошлом году - <strong>Франция</strong> и
+                        <strong>Швейцария</strong>. В этом году планирую в <strong>Италию</strong>, но как говорится -
+                        <q>человек предполагает, а Бог - располагает.</q>
+                    </p>
+                    <figure class="photo">
+                        <a href="static/media/travel_big.jpg">
+                            <img src="static/media/igor_travel.jpg" alt="Фото Игоря в путешествии" width="100%">
+                        </a>
+                        <figcaption><em>Франция. Эльзас. 2022</em></figcaption>
+                    </figure>
+                </div>
             </div>
-        </div>
+        </section>
 
         <!-- история -->
-        <button type="button" class="expander">
-            <svg width="20px" height="20px">
-                <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"
-                          id="open"></polyline>
-                <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray"
-                          id="close"></polyline>
-            </svg>
-            Как я стал разработчиком
-        </button>
+        <section class="expander">
+            <button type="button" class="expander__button">
+                <svg width="20px" height="20px">
+                    <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"
+                              id="open"></polyline>
+                    <polyline points="0,20 15,20 8,6" style="stroke-width: 1; display: none" fill="gray"
+                              id="close"></polyline>
+                </svg>
+                Как я стал разработчиком
+            </button>
 
-        <div class="expander-content">
-            <div class="timeline">
+            <div class="expander__content">
+                <div class="timeline">
 
-                <div class="container right">
-                    <div class="content">
-                        <h3>2008</h3>
-                        <p>впервые узнал о языке Python</p>
+                    <div class="container right">
+                        <div class="content">
+                            <h3>2008</h3>
+                            <p>впервые узнал о языке Python</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="container right">
-                    <div class="content">
-                        <h3>2008-2022</h3>
-                        <p>14 лет раздумывал</p>
+                    <div class="container right">
+                        <div class="content">
+                            <h3>2008-2022</h3>
+                            <p>14 лет раздумывал</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="container right">
-                    <div class="content">
-                        <h3>январь 2022</h3>
-                        <p>решил стать Python разработчиком</p>
+                    <div class="container right">
+                        <div class="content">
+                            <h3>январь 2022</h3>
+                            <p>решил стать Python разработчиком</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="container right">
-                    <div class="content">
-                        <h3>февраль 2022</h3>
-                        <p>начал изучать язык по-взрослому</p>
+                    <div class="container right">
+                        <div class="content">
+                            <h3>февраль 2022</h3>
+                            <p>начал изучать язык по-взрослому</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="container right">
-                    <div class="content">
-                        <h3>июнь 2022</h3>
-                        <p>взялся за Django</p>
+                    <div class="container right">
+                        <div class="content">
+                            <h3>июнь 2022</h3>
+                            <p>взялся за Django</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="container right">
-                    <div class="content">
-                        <h3>ноябрь 2022</h3>
-                        <p>настал черед Javascript</p>
+                    <div class="container right">
+                        <div class="content">
+                            <h3>ноябрь 2022</h3>
+                            <p>настал черед Javascript</p>
+                        </div>
                     </div>
-                </div>
 
-                <div class="container right">
-                    <div class="content">
-                        <h3>февраль 2023</h3>
-                        <p>и вот, наконец - HTML и CSS</p>
+                    <div class="container right">
+                        <div class="content">
+                            <h3>февраль 2023</h3>
+                            <p>и вот, наконец - HTML и CSS</p>
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
-        </div>
+        </section>
 
-    </section>
+    </article>
 
 </main>
 
@@ -233,7 +252,7 @@
 </footer>
 
 <script>
-    const coll = document.getElementsByClassName("expander");
+    const coll = document.getElementsByClassName("expander__button");
     const qrCode = document.getElementById("qr-code")
     let i;
 

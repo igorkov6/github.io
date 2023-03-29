@@ -1,182 +1,124 @@
+@charset "UTF-8";
 @font-face {
-    font-family: "Mulish Light";
-    src: url(../fonts/Mulish-Light.ttf);
-}
-
-:root {
-    --main-color: #333;
-}
-
+  font-family: "Mulish Light";
+  src: url(../fonts/Mulish-Light.ttf); }
 * {
-    font-size: 20px;
-}
+  font-size: 20px; }
 
 body {
-    margin: 0;
-    color: var(--main-color);
-}
-
-a {
-    color: var(--main-color);
-}
+  margin: 0;
+  color: #333; }
 
 header {
-    background-color: lemonchiffon;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    padding: 0 10%;
-}
-
-footer {
-    padding: 0 10%;
-}
-
-h1, h2 {
+  background-color: lemonchiffon; }
+  header h1 {
     font-family: "Mulish Light", Arial, Helvetica, sans-serif;
     font-weight: lighter;
-}
-
-h1 {
     margin: 0;
     padding: 1rem;
     text-align: center;
-    font-size: 2rem;
-}
+    font-size: 2rem; }
 
-h2 {
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: lightgray;
-}
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10%; }
+
+footer {
+  padding: 0 20%; }
+
+.name {
+  text-align: center; }
+  .name strong {
+    font-size: 1.5rem; }
 
 .photo img {
-    box-shadow: 5px 5px 10px grey;
-    margin-bottom: 1rem;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
+  box-shadow: 5px 5px 10px grey;
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
 .photo figcaption {
-    color: gray;
-    text-align: center;
-}
+  color: gray;
+  text-align: center; }
 
-.contact-button {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-button a {
+.contact {
+  display: flex;
+  flex-direction: column; }
+  .contact a {
     padding: 15px;
     text-decoration: none;
     border-radius: 5px;
     text-align: center;
     margin: 0.5rem;
-}
+    min-width: max-content;
+    color: #333; }
+    .contact a.contact__phone {
+      background-color: rgba(255, 80, 15, 0.7); }
+      .contact a.contact__phone:hover {
+        background-color: #ff500f; }
+    .contact a.contact__viber {
+      background-color: rgba(115, 96, 242, 0.7); }
+      .contact a.contact__viber:hover {
+        background-color: #7360f2; }
+    .contact a.contact__whatsapp {
+      background-color: rgba(37, 211, 102, 0.7); }
+      .contact a.contact__whatsapp:hover {
+        background-color: #25d366; }
+    .contact a.contact__telegram {
+      background-color: rgba(42, 171, 238, 0.7); }
+      .contact a.contact__telegram:hover {
+        background-color: #2aabee; }
+    .contact a.contact__skype {
+      background-color: rgba(0, 175, 240, 0.7); }
+      .contact a.contact__skype:hover {
+        background-color: #00aff0; }
+    .contact a.contact__email {
+      background-color: rgba(107, 142, 35, 0.7); }
+      .contact a.contact__email:hover {
+        background-color: olivedrab; }
 
-.contact-button a.phone {
-    background-color: rgba(255, 80, 15, 0.7);
-}
+.expander .expander__button {
+  color: #333;
+  font-family: "Mulish Light", Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 1rem 0;
+  width: 100%;
+  border: none;
+  text-align: left;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: lightgray;
+  background-color: inherit; }
+  .expander .expander__button:hover {
+    background-color: lightgray; }
+.expander .expander__content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: aliceblue; }
 
-.contact-button a.phone:hover {
-    background-color: rgb(255, 80, 15);
-}
+.block .block__title h2 {
+  font-family: "Mulish Light", Arial, Helvetica, sans-serif;
+  font-weight: lighter;
+  font-size: 1.5rem;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: lightgray; }
+.block .block__content {
+  display: flex; }
 
-.contact-button a.viber {
-    background-color: rgba(115, 96, 242, 0.7);
-}
-
-.contact-button a.viber:hover {
-    background-color: rgb(115, 96, 242);
-}
-
-.contact-button a.whatsapp {
-    background-color: rgba(37, 211, 102, 0.7);
-}
-
-.contact-button a.whatsapp:hover {
-    background-color: rgb(37, 211, 102);
-}
-
-.contact-button a.telegram {
-    background-color: rgba(42, 171, 238, 0.7);
-}
-
-.contact-button a.telegram:hover {
-    background-color: rgb(42, 171, 238);
-}
-
-.contact-button a.skype {
-    background-color: rgba(0, 175, 240, 0.7);
-}
-
-.contact-button a.skype:hover {
-    background-color: rgb(0, 175, 240);
-}
-
-.contact-button a.email {
-    background-color: rgba(107, 142, 35, 0.7);
-}
-
-.contact-button a.email:hover {
-    background-color: rgb(107, 142, 35);
-}
-
-.about-block {
-    display: flex;
-}
-
-.avatar {
-    border-radius: 50%;
-    margin-right: 1rem;
-}
-
-.photo-block {
-    display: grid;
-    grid-template-columns: 100%;
-}
-
-.expander {
-    color: var(--main-color);
-    font-family: "Mulish Light", Arial, Helvetica, sans-serif;
-    cursor: pointer;
-    margin: 1rem 0;
-    width: 100%;
-    border: none;
-    text-align: left;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: lightgray;
-    background-color: inherit;
-}
-
-.active, .expander:hover {
-    background-color: lightgray;
-}
-
-.expander-content {
-    padding: 0 18px;
-    display: none;
-    overflow: hidden;
-    background-color: aliceblue;
-}
-
-#qr-code {
-    display: block;
-}
-
-/* вертикальная линия */
 .timeline {
-    position: relative;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.timeline::after {
+  /* вертикальная линия */
+  /* последовательность не изменять */
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* точка линии */
+  /* стрелка контейнера */
+  /* контейнер контента */ }
+  .timeline::after {
     content: '';
     position: absolute;
     width: 6px;
@@ -184,11 +126,8 @@ h2 {
     top: 0;
     bottom: 0;
     left: 31px;
-    margin-left: -3px;
-}
-
-/* точка линии */
-.timeline .container::after {
+    margin-left: -3px; }
+  .timeline .container::after {
     content: '';
     position: absolute;
     width: 25px;
@@ -198,15 +137,10 @@ h2 {
     border: 4px solid #FF9F55;
     top: 15px;
     border-radius: 50%;
-    z-index: 1;
-}
-
-.timeline .right::after {
-    left: 15px;
-}
-
-/* стрелка контейнера */
-.timeline .right::before {
+    z-index: 1; }
+  .timeline .right::after {
+    left: 15px; }
+  .timeline .right::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -216,59 +150,55 @@ h2 {
     left: 30px;
     border: medium solid white;
     border-width: 10px 10px 10px 0;
-    border-color: transparent lightgray transparent transparent;
-}
-
-.timeline .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent lightgray transparent transparent;
-}
-
-/* контейнер контента */
-.timeline .container {
+    border-color: transparent lightgray transparent transparent; }
+  .timeline .container {
     padding: 10px 25px 10px 70px;
     position: relative;
     background-color: inherit;
     width: 80%;
-}
+    /* контент */ }
+    .timeline .container::before {
+      left: 60px;
+      border: medium solid white;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent lightgray transparent transparent; }
+    .timeline .container .content {
+      padding: 5px 20px;
+      background-color: lightgray;
+      position: relative;
+      border-radius: 6px; }
+      .timeline .container .content h3 {
+        margin: 0;
+        padding: 0; }
+      .timeline .container .content p {
+        margin: 0;
+        padding: 0; }
 
-/* контент */
-.timeline .container .content {
-    padding: 5px 20px;
-    background-color: lightgray;
-    position: relative;
-    border-radius: 6px;
-}
+.block-qrcode {
+  display: block; }
 
-.timeline .container .content h3 {
-    margin: 0;
-    padding: 0;
-}
+.block-avatar {
+  border-radius: 50%;
+  margin-right: 1rem; }
 
-.timeline .container .content p {
-    margin: 0;
-    padding: 0;
-}
+.block-photo {
+  display: grid;
+  grid-template-columns: 100%; }
 
-@media screen and (min-width: 600px) {
-    main {
-        flex-direction: row;
-    }
+@media (min-width: 800px) {
+  main {
+    flex-direction: row; }
 
-    .photo-block {
-        display: grid;
-        grid-template-columns: 50% 50%;
-        grid-template-rows: 100%;
-    }
+  .block-photo {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%; }
 
-    .contacts {
-        width: 40%;
-    }
+  .contacts {
+    width: 40%; }
 
-    .about {
-        margin-left: 4%;
-        width: 55%;
-    }
-}
+  .about {
+    margin-left: 4%;
+    width: 55%; } }
+
+/*# sourceMappingURL=styles.css.map */
