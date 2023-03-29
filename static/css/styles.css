@@ -240,7 +240,7 @@ footer {
   display: grid;
   grid-template-columns: 100%; }
 
-@media (min-width: 800px) {
+@media screen and (min-width: 800px) {
   main {
     flex-direction: row; }
 
