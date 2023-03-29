@@ -12,6 +12,20 @@
 <body>
 
 <header>
+    <nav class="topnav">
+        <a href="#photo">Home</a>
+        <a href="#contact">Contacts</a>
+        <div class="dropdown">
+            <button class="dropdown__button">About</button>
+            <div class="dropdown__content">
+                <a href="#about">обо мне</a>
+                <a href="#education">образование</a>
+                <a href="#experience">опыт работы</a>
+                <a href="#hobby">хобби</a>
+                <a href="#history">история</a>
+            </div>
+        </div>
+    </nav>
     <h1>Игорь Ковалёв</h1>
 </header>
 
@@ -21,7 +35,7 @@
     <article class="contacts">
 
         <!-- фото -->
-        <section>
+        <section id="photo">
             <figure class="photo">
                 <img src="static/media/igor_young.png" alt="Фото Игоря в молодости" width="50%">
                 <figcaption>
@@ -31,12 +45,12 @@
         </section>
 
         <!-- имя -->
-        <section class="name">
+        <section class="name" id="name">
             <strong>Ковалёв Игорь Владимирович</strong>
         </section>
 
         <!-- контакты -->
-        <section class="expander">
+        <section class="expander" id="contact">
             <button class="expander__button" type="button" id="contacts">
                 <svg width="20px" height="20px">
                     <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray" id="open">
@@ -75,7 +89,7 @@
     <article class="about">
 
         <!-- обо мне -->
-        <section class="block">
+        <section class="block" id="about">
             <div class="block__title">
                 <h2>Обо мне</h2>
             </div>
@@ -90,7 +104,7 @@
         </section>
 
         <!-- образование -->
-        <section class="block">
+        <section class="block" id="education">
             <viv class="block__title">
                 <h2>Образование</h2>
             </viv>
@@ -112,7 +126,7 @@
         </section>
 
         <!-- опыт работы -->
-        <section class="expander">
+        <section class="expander" id="experience">
             <button type="button" class="expander__button">
                 <svg width="20px" height="20px">
                     <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"
@@ -142,7 +156,7 @@
         </section>
 
         <!-- хобби -->
-        <section class="expander">
+        <section class="expander" id="hobby">
             <button type="button" class="expander__button">
                 <svg width="20px" height="20px">
                     <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"
@@ -172,7 +186,7 @@
         </section>
 
         <!-- история -->
-        <section class="expander">
+        <section class="expander" id="history">
             <button type="button" class="expander__button">
                 <svg width="20px" height="20px">
                     <polyline points="0,6 15,6 8,20" style="stroke-width: 1; display: inline" fill="gray"

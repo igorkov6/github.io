@@ -4,6 +4,7 @@
 }
 
 $main-color: #333;
+$bg-header: lemonchiffon;
 
 * {
   font-size: 20px;
@@ -15,12 +16,13 @@ body {
 }
 
 header {
-  background-color: lemonchiffon;
+  background-color: $bg-header;
 
   & h1 {
+
     font-family: "Mulish Light", Arial, Helvetica, sans-serif;
     font-weight: lighter;
-    margin: 0;
+    margin: 64px;
     padding: 1rem;
     text-align: center;
     font-size: 2rem;
@@ -37,10 +39,86 @@ footer {
   padding: 0 20%;
 }
 
+.topnav {
+  display: inline;
+  background-color: $bg-header;
+  height: 64px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+
+  & a {
+    font-family: "Mulish Light", Arial, Helvetica, sans-serif;
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    color: $main-color;
+
+    &:hover {
+      color: gray;
+    }
+  }
+
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    display: inline-block;
+
+    /* Change the background color of the dropdown button when the dropdown content is shown */
+    &:hover .dropdown__button {
+      color: gray;
+    }
+
+    /* Show the dropdown menu on hover */
+    &:hover .dropdown__content {
+      display: block;
+    }
+
+    /* Dropdown Button */
+    .dropdown__button {
+      background-color: $bg-header;
+      color: $main-color;
+      padding: 20px 16px;
+      font-size: 20px;
+      border: none;
+      width: 100px;
+      height: 64px;
+      overflow: hidden;
+      font-family: "Mulish Light", Arial, Helvetica, sans-serif;
+    }
+
+    /* Dropdown Content (Hidden by Default) */
+    .dropdown__content {
+      display: none;
+      position: absolute;
+      width: 150px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+
+      /* Links inside the dropdown */
+      & a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        width: 150px;
+        background-color: white;
+
+        /* Change color of dropdown links on hover */
+        &:hover {
+          background-color: $bg-header;
+        }
+      }
+    }
+  }
+}
+
 .name {
   text-align: center;
+
   & strong {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -285,5 +363,13 @@ footer {
   .about {
     margin-left: 4%;
     width: 55%;
+  }
+
+  .topnav {
+    display: none;
+  }
+
+  header h1 {
+    margin: 0;
   }
 }
